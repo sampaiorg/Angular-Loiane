@@ -1,0 +1,27 @@
+<section>
+  <article>
+    <h3>Data Binding - Interpolaçao</h3>
+    <p>
+      String renderizada com interpolação: {{ url }}
+    </p>
+    <p>
+      Resultado de 1 + 1 é: {{ 1 + 1}}
+    </p>
+    <p>
+      Resultado de 1 + 1 não é: {{ 1 + 1 + getNumber()}}
+    </p>
+    <p>
+      Curso de Angular é verdadeiro? {{ cursoAngular && getCursoAngular()}}
+    </p>
+
+  </article>
+    <p>Renderizando com Data Binding</p>
+    <img src="{{ urlImage }}">
+
+    <p>Renderizando com Proprierty Bind</p>
+    <img [src]="urlImage">
+
+  <article>
+
+  </article>
+</section>
