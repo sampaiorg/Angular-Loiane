@@ -11,6 +11,10 @@ export class DataBindingComponent implements OnInit {
 
   urlImage: string = 'http://lorempixel.com/400/200/';
 
+  valorAtual: string = '';
+  valorSalvo: string = '';
+  isMouseOver: Boolean = false;
+
   getNumber(){
     return 1;
   }
@@ -24,6 +28,23 @@ export class DataBindingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  botaoClique(){
+    alert('Botão clicado!');
+  }
+
+  onKeyUp(evento: KeyboardEvent){
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  }
+
+  salvarValor(valor: string){
+   this.valorSalvo = valor;
+  }
+
+  onMouseOut(){
+    this.isMouseOver = !this.isMouseOver;
+    
   }
 
 }
