@@ -22,6 +22,32 @@
     <img [src]="urlImage">
 
   <article>
+    <h3>Class / Style Biding</h3>
+
+    <select #classe (change) = "0">
+      <option value="" selected>-</option>
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Warning</option>
+      <option value="alert-danger">Error</option>
+    </select>
+
+    <p class="alert {{ classe.value }}">Cor do texto conforme a seleção</p>
+
+    <p class="alert {{ classe.value }}" [style.display]= "classe.value == 'alert-danger' ? 'block' : 'none'" >Apenas aparece quando erro</p>
+
+    <div class="alert" role="alert" [class.alert-success] = "classe.value == 'alert-success' ">
+      <strong>SUCESSO</strong>
+    </div>
+    <div class="alert" role="alert" [class.alert-info] = "classe.value == 'alert-info' ">
+      <strong>INFO</strong>
+    </div>
+    <div class="alert" role="alert" [class.alert-warning] = "classe.value == 'alert-warning' ">
+      <strong>WARNING</strong>
+    </div>
+    <div class="alert" role="alert" [class.alert-danger] = "classe.value == 'alert-danger' ">
+      <strong>ERROR</strong>
+    </div>
 
   </article>
 </section>
