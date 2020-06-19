@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
@@ -14,6 +15,16 @@ export class DataBindingComponent implements OnInit {
   valorAtual: string = '';
   valorSalvo: string = '';
   isMouseOver: Boolean = false;
+
+  nomeCurso: string = 'Angular 2';
+
+  name: string = 'teste';
+
+  // Declaração do Objeto:
+  pessoa: any = {
+    nome: 'abc',
+    idade: 10
+  }
 
   getNumber(){
     return 1;
@@ -44,6 +55,11 @@ export class DataBindingComponent implements OnInit {
 
   onMouseOut(){
     this.isMouseOver = !this.isMouseOver;
+    
+  }
+
+  onMudouValor(evento){
+    console.log(evento.numero);
     
   }
 

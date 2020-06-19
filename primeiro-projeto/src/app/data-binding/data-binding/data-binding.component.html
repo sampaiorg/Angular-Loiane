@@ -75,4 +75,40 @@
   
   
   </article>
+
+  <div class="pt-4 col-12 mx-auto">
+    <article>
+    <h3>
+      Two Way Data binding
+    </h3>
+    <ul>
+      <li>Valores utilizando Two way Data bind</li>
+      <li>Sintaxe Box in banana -> <strong>[()]</strong> <- Banana na Caixa</li>
+      <li>O ngModel pertence ao module "FormsModule"</li>
+      <li>Pode ser utilizado com variáveis simples quanto com objetos</li>
+    </ul>
+    <p>
+      Utilizando String simples na variável: <input type="text" [(ngModel)]="name" /> -> Valor digitado: {{name}}
+    </p>
+
+    <p>Utilizando Objeto:</p>
+    <p>Nome digitado {{pessoa.nome}} e a idade é {{pessoa.idade}} </p>
+    <p>Nome: <input type="text" [(ngModel)]="pessoa.nome" /> | Idade: <input type="number" [(ngModel)]="pessoa.idade" /></p>
+  </article>
+  </div>
+</section>
+
+
+<section>
+  <article>
+    <div class="pt-4 col-12 mx-auto">
+      <h3>Input/Output Property</h3>
+      <p>Como pode ser utilizado dados de um componete em outro componente com properties binding (@Input)</p>
+      <!-- Aqui adiciona o componente do @input -->
+
+      <app-nome-curso [nome]="nomeCurso"></app-nome-curso>
+
+      <contador (mudouValor)="onMudouValor($event)"></contador>
+    </div>
+  </article>
 </section>
