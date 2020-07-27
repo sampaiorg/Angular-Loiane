@@ -60,7 +60,7 @@ export class DataBindingComponent implements OnInit {
 
   onMudouValor(evento){
     console.log(evento.numero);
-    
+    // Comentário teste Git
   }
 
 }
